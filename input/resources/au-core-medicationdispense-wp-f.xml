@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-medicationdispense-wp-f"/>
-  <url value="https://YOUR-CANONICAL/StructureDefinition/au-core-medicationdispense-wp-f"/>
+  <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
   <name value="AUCoreMedicationDispenseWPF"/>
   <title value="EXPERIMENTAL AU Core MedicationDispense whenPrepared F"/>
   <status value="draft"/>

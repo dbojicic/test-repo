@@ -113,7 +113,7 @@
 		</parameter>
 		<parameter>
 			<code value="fmm-definition"/>
-			<value value="generalguidance.html#maturity-levels"/>
+			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
 		</parameter>
 		<parameter>
 			<code value="path-resource"/>
