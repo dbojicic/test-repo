@@ -1,0 +1,14 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="testing-approach.html">Testing Approach</a>
+  </li>
+  <li>
+    <a href="artifacts.html">FHIR Artefacts</a>
+  </li>
+    <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>

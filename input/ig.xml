@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="dbojicic.fhir.ig.testing"/>
+  <url value="https://dbojicic.github.io/fhir-ig-testing/ImplementationGuide/dbojicic.fhir.ig.testing"/>
+  <version value="0.0.1"/>
+  <name value="DBojicicFHIRIGTesting"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="DBojicic"/>
+  <description value="A personal testing area containing artefacts for exploring and testing FHIR profile behaviour, including profiles defined in HL7 Australia FHIR IGs."/>
+  <packageId value="dbojicic.fhir.ig.testing"/>
+  <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+<!--<dependsOn id="aubaser4">
+		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
+		<packageId value="hl7.fhir.au.base"/>
+		<version value="current"/>
+	</dependsOn>-->
+  <dependsOn>
+		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.core"/>
+		<packageId value="hl7.fhir.au.core"/>
+		<version value="current"/>
+	</dependsOn>
+  <definition>
+    <!--PROFILES-->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense-wp-a"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense-wp-b"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense-wp-c"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense-wp-d"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense-wp-e"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationdispense-wp-f"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <!--EXAMPLES-->
+    <!--<resource>
+      <reference>
+        <reference value="MedicationDispense/example"/>
+      </reference>
+      <name value="Observation example"/>
+      <description value="Observation example as placeholder for page"/>
+      <exampleCanonical value="http://draft.hl7.org.au/fhir/mydraftig/StructureDefinition/myobservation"/>
+    </resource>-->
+    <!-- PAGES-->
+		<page>
+			<nameUrl value="toc.html"/>
+			<title value="Table of Contents"/>
+			<generation value="html"/>
+			<page>
+				<nameUrl value="index.html"/>
+				<title value="Home"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="testing-approach.html"/>
+				<title value="Testing Approach"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="artefacts.html"/>
+				<title value="FHIR artefacts"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="downloads.html"/>
+				<title value="Downloads"/>
+				<generation value="markdown"/>
+			</page>
+		</page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2026+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
+		</parameter>
+		<parameter>
+			<code value="fmm-definition"/>
+			<value value="generalguidance.html#maturity-levels"/>
+		</parameter>
+		<parameter>
+			<code value="path-resource"/>
+			<value value="input/resources"/>
+		</parameter>
+		<parameter>
+			<code value="shownav"/>
+			<value value="false"/>
+		</parameter>
+		<parameter>
+			<code value="show-inherited-invariants"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="excludemap"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-expansion-params"/>
+			<value value="../input/_resources/exp-params.json"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
+		</parameter>
+  </definition>
+</ImplementationGuide>

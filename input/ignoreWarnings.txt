@@ -1,0 +1,7 @@
+
+== Suppressed Messages ==
+
+# === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===
+The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
