@@ -12,5 +12,5 @@ This guide is divided into several pages which are listed at the top of each pag
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
 - [Testing Approach](testing-approach.html): This page describes the testing approach, test conventions, test profiles and scenarios.
-- [Artefacts Summary](artefacts.html): This page provides detailed descriptions and formal definitions for the FHIR artefacts defined in this guide.
+- [Artefacts Summary](artifacts.html): This page provides detailed descriptions and formal definitions for the FHIR artefacts defined in this guide.
 - [Downloads](downloads.html): This page provides links to downloadable artefacts.

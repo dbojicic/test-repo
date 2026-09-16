@@ -18,7 +18,7 @@
 		<version value="current"/>
 	</dependsOn>-->
   <dependsOn>
-		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.core"/>
+		<uri value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
 		<packageId value="hl7.fhir.au.core"/>
 		<version value="current"/>
 	</dependsOn>
