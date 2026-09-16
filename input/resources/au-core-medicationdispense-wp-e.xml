@@ -3,7 +3,7 @@
   <id value="au-core-medicationdispense-wp-e" />
   <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-e" />
   <name value="AUCoreMedicationDispenseWPE" />
-  <title value="AU Core MedicationDispense whenPrepared Test E - Optional and DAR Prohibited" />
+  <title value="EXPERIMENTAL AU Core MedicationDispense whenPrepared E" />
   <status value="draft" />
   <experimental value="true" />
   <description

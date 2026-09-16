@@ -3,7 +3,7 @@
   <id value="au-core-medicationdispense-wp-c"/>
   <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-c"/>
   <name value="AUCoreMedicationDispenseWPC"/>
-  <title value="AU Core MedicationDispense whenPrepared Test C - Mandatory with DAR Permitted"/>
+  <title value="EXPERIMENTAL AU Core MedicationDispense whenPrepared C"/>
   <status value="draft"/>
   <experimental value="true"/>
   <description value="Test profile requiring whenPrepared while retaining support for primitive extensions including Data Absent Reason."/>

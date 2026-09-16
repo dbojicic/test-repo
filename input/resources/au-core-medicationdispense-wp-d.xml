@@ -3,7 +3,7 @@
   <id value="au-core-medicationdispense-wp-d"/>
   <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-d"/>
   <name value="AUCoreMedicationDispenseWPD"/>
-  <title value="AU Core MedicationDispense whenPrepared Test D - Date or DAR Required"/>
+  <title value="EXPERIMENTAL AU Core MedicationDispense whenPrepared D"/>
   <status value="draft"/>
   <experimental value="true"/>
   <description value="Test profile requiring whenPrepared and requiring either a value or a Data Absent Reason extension."/>

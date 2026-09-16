@@ -3,7 +3,7 @@
   <id value="au-core-medicationdispense-wp-b"/>
   <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-b"/>
   <name value="AUCoreMedicationDispenseWPB"/>
-  <title value="AU Core MedicationDispense whenPrepared Test B"/>
+  <title value="EXPERIMENTAL AU Core MedicationDispense whenPrepared B"/>
   <status value="draft"/>
   <experimental value="true"/>
   <description value="Test profile requiring whenPrepared is mandatory and is required to have a value."/>

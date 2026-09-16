@@ -91,9 +91,9 @@
 				<generation value="markdown"/>
 			</page>
 			<page>
-				<nameUrl value="artefacts.html"/>
-				<title value="FHIR artefacts"/>
-				<generation value="markdown"/>
+				<nameUrl value="artifacts.html"/>
+				<title value="Artefacts Summary"/>
+				<generation value="html"/>
 			</page>
 			<page>
 				<nameUrl value="downloads.html"/>

@@ -3,7 +3,7 @@
   <id value="au-core-medicationdispense-wp-a"/>
   <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-a"/>
   <name value="AUCoreMedicationDispenseWPA"/>
-  <title value="AU Core MedicationDispense whenPrepared Test A"/>
+  <title value="EXPERIMENTAL AU Core MedicationDispense whenPrepared A"/>
   <status value="draft"/>
   <experimental value="true"/>
   <description value="Test profile derived from AU Core MedicationDispense with no additional constraints on whenPrepared."/>

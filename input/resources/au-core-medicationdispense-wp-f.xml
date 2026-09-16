@@ -3,7 +3,7 @@
   <id value="au-core-medicationdispense-wp-f"/>
   <url value="https://YOUR-CANONICAL/StructureDefinition/au-core-medicationdispense-wp-f"/>
   <name value="AUCoreMedicationDispenseWPF"/>
-  <title value="AU Core MedicationDispense whenPrepared Test F - Second-level derivation"/>
+  <title value="EXPERIMENTAL AU Core MedicationDispense whenPrepared F"/>
   <status value="draft"/>
   <experimental value="true"/>
   <description value="Test profile derived from test profile C to test inheritance of the AU Core whenPrepared constraint through an additional level of derivation."/>
