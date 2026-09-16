@@ -22,7 +22,6 @@ All examples included in this implementation guide are available for download:
 
 - [XML](examples.xml.zip)
 - [JSON](examples.json.zip)
-- [TTL](examples.ttl.zip)
 
 ### Consolidated CSV and Excel File Representations of Profiles 
 
@@ -30,18 +29,3 @@ All the profile information for the {{site.data.fhir.ig.title}} in a single CSV 
 
 - [CSV(compressed folder)](csvs.zip)
 - [Excel(compressed folder)](excels.zip)
-
-### Implementation Guide Details
-
-The following link to the ImplementationGuide resource defines the technical details of this publication, including dependencies and publishing parameters:
-
-- [XML](ImplementationGuide-hl7.fhir.au.core.xml) 
-- [JSON](ImplementationGuide-hl7.fhir.au.core.json)
-- [TTL](ImplementationGuide-hl7.fhir.au.core.ttl)
-
-### OpenAPI (a.k.a., Swagger) Definition Files
-
- The following [OpenAPI](https://www.openapis.org/) files are generated from the AU Core CapabilityStatements:
-
-- [AU Core Responder](au-core-responder.openapi.json)
-- [AU Core Requester](au-core-requester.openapi.json)
