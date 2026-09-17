@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="wp-d-07"/>
+    <meta>
+        <profile value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-d"/>
+    </meta>
+    <status value="completed"/>
+    <medicationReference>
+        <reference value="Medication/lipex"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <performer>
+        <actor>
+            <reference value="Organization/appin-pharmacy"/>
+        </actor>
+    </performer>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/simvastatin"/>
+    </authorizingPrescription>
+    <quantity>
+        <value value="30"/>
+        <unit value="TAB"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+        <code value="TAB"/>
+    </quantity>
+    <whenPrepared value="2023-06-01">
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+        </extension> 
+    </whenPrepared>
+    <dosageInstruction>
+        <text value="Take one tablet daily"/>
+    </dosageInstruction>
+</MedicationDispense>
