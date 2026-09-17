@@ -467,6 +467,86 @@
 		<description value="wp-e-10 whenPrepared value + DAR + unrelated extension"/>
 		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-e"/>
 	</resource>
+		<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-01"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-01 whenPrepared not present"/>
+		<description value="wp-f-01 whenPrepared not present"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-02"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-02 whenPrepared not present"/>
+		<description value="wp-f-02 whenPrepared present, full datetime"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-03"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-03 whenPrepared not present"/>
+		<description value="wp-f-03 whenPrepared present, date only (10 chars)"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-04"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-04 whenPrepared present, month only"/>
+		<description value="wp-f-04 whenPrepared present, month only"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-05"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-05 whenPrepared present, year only"/>
+		<description value="wp-f-05 whenPrepared present, year only"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-06"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-06 whenPrepared value not present, DAR used instead"/>
+		<description value="wp-f-06 whenPrepared value not present, DAR used instead"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-07"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-07 whenPrepared value + DAR together"/>
+		<description value="wp-f-07 whenPrepared value + DAR together"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-08"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-08 whenPrepared value + unrelated extension"/>
+		<description value="wp-f-08 whenPrepared value + unrelated extension"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-09"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-09 whenPrepared not present, unrelated extension only"/>
+		<description value="wp-f-09 whenPrepared not present, unrelated extension only"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationDispense/wp-f-10"/>
+		</reference>
+		<name value="MedicationDispense - wp-f-10 ared value + DAR + unrelated extension"/>
+		<description value="wp-f-10 whenPrepared value + DAR + unrelated extension"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
     <!-- PAGES-->
 		<page>
 			<nameUrl value="toc.html"/>
