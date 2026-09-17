@@ -20,9 +20,7 @@ For example, for the `MedicationDispense.whenPrepared` test series, `wp` is the 
 
 This test series tests the AU Core invariant requiring `MedicationDispense.whenPrepared`, when populated, to be precise to at least the day: `$this.hasValue() implies $this.toString().length() >= 10`
 
-The tests use profiles derived from AU Core MedicationDispense with different downstream constraints on whenPrepared. The purpose is to confirm that the invariant constrains date precision without preventing downstream profiles from independently constraining the presence of whenPrepared, use of Data Absent Reason (DAR), or other valid profiling choices.
-
-The tests use profiles derived from AU Core MedicationDispense with different downstream constraints on `whenPrepared`. The purpose is to confirm that the invariant constrains date precision without preventing downstream profiles from independently constraining the presence of `whenPrepared`, use of Data Absent Reason (DAR), or other valid profiling choices and without restricting any content valid content (other extensions, or DAR co-existing with a value) that a profile does not explicitly close off.
+The tests use profiles derived from AU Core MedicationDispense with different downstream constraints on `whenPrepared`. The purpose is to confirm that the invariant constrains date precision without preventing downstream profiles from independently constraining the presence of `whenPrepared`, use of Data Absent Reason (DAR), or other valid profiling choices and without restricting any content valid content (other extensions, or DAR co-existing with a value).
 
 The following test profiles are used:
 
