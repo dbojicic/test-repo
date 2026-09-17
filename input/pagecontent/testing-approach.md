@@ -41,7 +41,7 @@ Profile | Additional constraint
         <tr>
             <th>Profile</th>
             <th>Additional constraint</th>
-            <th>Test Scenario</th>
+            <th>Test scenario</th>
             <th>Expected result</th>
             <th>Example id</th>
             </tr>
@@ -95,7 +95,7 @@ Profile | Additional constraint
              <td><a href="MedicationDispense-wp-a-09.html">medicationdispense-wp-a-09</a></td>
         </tr>
         <tr>
-            <td>whenPrepared whenPrepared value + DAR + unrelated extension</td>
+            <td>whenPrepared value + DAR + unrelated extension</td>
             <td>Pass</td>
             <td><a href="MedicationDispense-wp-a-10.html">medicationdispense-wp-a-10</a></td>
         </tr>
@@ -132,22 +132,22 @@ Profile | Additional constraint
             <td><a href="MedicationDispense-wp-b-06.html">medicationdispense-wp-b-06</a></td>
         </tr>
         <tr>
-            <td>whenPrepared whenPrepared value + DAR together</td>
-            <td>Fail - DAR extension not permitted</td>
+            <td>whenPrepared value + DAR together</td>
+            <td>Pass - DAR extension not permitted</td>
             <td><a href="MedicationDispense-wp-b-07.html">medicationdispense-wp-b-07</a></td>
         </tr>
         <tr>
-            <td>whenPrepared whenPrepared value + unrelated extension</td>
+            <td>whenPrepared value + unrelated extension</td>
             <td>Pass - unrelated extension not restricted</td>
             <td><a href="MedicationDispense-wp-b-08.html">medicationdispense-wp-b-08</a></td>
         </tr>
         <tr>
             <td>whenPrepared value not present, unrelated extension only</td>
-            <td>Fail - no value present; mandatory value requirement not satisfied by an unrelated extension</td>
+            <td>Fail - no value present</td>
             <td><a href="MedicationDispense-wp-b-09.html">medicationdispense-wp-b-09</a></td>
         </tr>
         <tr>
-            <td>whenPrepared whenPrepared value + DAR + unrelated extension</td>
+            <td>whenPrepared value + DAR + unrelated extension</td>
             <td>Fail - DAR extension still not permitted, independent of the other extension</td>
             <td><a href="MedicationDispense-wp-b-10.html">medicationdispense-wp-b-10</a></td>
         </tr>
@@ -184,12 +184,12 @@ Profile | Additional constraint
             <td><a href="MedicationDispense-wp-c-06.html">medicationdispense-wp-c-06</a></td>
         </tr>
         <tr>
-            <td>whenPrepared whenPrepared value + DAR together</td>
+            <td>whenPrepared value + DAR together</td>
             <td>Pass - DAR permitted; co-existing with a value not prohibited</td>
             <td><a href="MedicationDispense-wp-c-07.html">medicationdispense-wp-c-07</a></td>
         </tr>
         <tr>
-            <td>whenPrepared whenPrepared value + unrelated extension</td>
+            <td>whenPrepared value + unrelated extension</td>
             <td>Pass - unrelated extension unaffected</td>
             <td><a href="MedicationDispense-wp-c-08.html">medicationdispense-wp-c-08</a></td>
         </tr>
@@ -199,7 +199,7 @@ Profile | Additional constraint
             <td><a href="MedicationDispense-wp-c-09.html">medicationdispense-wp-c-09</a></td>
         </tr>
         <tr>
-            <td>whenPrepared whenPrepared value + DAR + unrelated extension</td>
+            <td>whenPrepared value + DAR + unrelated extension</td>
             <td>Pass - all three coexist without conflict</td>
             <td><a href="MedicationDispense-wp-c-10.html">medicationdispense-wp-c-10</a></td>
         </tr>
@@ -207,7 +207,7 @@ Profile | Additional constraint
             <td rowspan="10"><a href="StructureDefinition-au-core-medicationdispense-wp-d.html">au-core-medicationdispense-wp-d</a></td>
             <td rowspan="10">whenPrepared is mandatory via a separate invariant requiring either a value or DAR</td>
             <td>whenPrepared value not present, no DAR</td>
-            <td>Fail - value-or-DAR invariant</td>
+            <td>Fail - value or DAR invariant</td>
             <td><a href="MedicationDispense-wp-d-01.html">medicationdispense-wp-d-01</a></td>
         </tr>
         <tr>
@@ -324,12 +324,12 @@ Profile | Additional constraint
         </tr>
         <tr>
             <td>whenPrepared present, month only (7 chars)</td>
-            <td>Fail - whenPrepared precision invariant (inherited)</td>
+            <td>Fail - whenPrepared precision invariant</td>
             <td><a href="MedicationDispense-wp-f-04.html">medicationdispense-wp-f-04</a></td>
         </tr>
         <tr>
             <td>whenPrepared present, year only (4 chars)</td>
-            <td>Fail - whenPrepared precision invariant (inherited)</td>
+            <td>Fail - whenPrepared precision invariant</td>
             <td><a href="MedicationDispense-wp-f-05.html">medicationdispense-wp-f-05</a></td>
         </tr>
         <tr>
@@ -348,7 +348,7 @@ Profile | Additional constraint
         </tr>
         <tr>
             <td>whenPrepared value not present, unrelated extension only</td>
-            <td>Fail - neither value nor DAR present</td>
+            <td>Pass - 1..1 cardinality from wp-c is satisfied by any extension present, not just DAR</td>
             <td><a href="MedicationDispense-wp-e-09.html">medicationdispense-wp-f-09</a></td>
         </tr>
         <tr>
