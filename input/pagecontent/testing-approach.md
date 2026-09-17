@@ -307,7 +307,7 @@ Profile | Additional constraint
             <td rowspan="10"><a href="StructureDefinition-au-core-medicationdispense-wp-f.html">au-core-medicationdispense-wp-f</a></td>
             <td rowspan="10">Derives from profile C with no additional constraints on whenPrepared, to test inheritance through a second level of derivation</td>
             <td>whenPrepared not present, no DAR</td>
-            <td>Fail - inherited mandatory requirement (neither value nor DAR present)</td>
+            <td>Fail - mandatory requirement (neither value nor DAR present)</td>
             <td><a href="MedicationDispense-wp-f-01.html">medicationdispense-wp-f-01</a></td>
         </tr>
         <tr>

@@ -4,6 +4,7 @@
   <url value="https://dbojicic.github.io/fhir-ig-testing/ImplementationGuide/dbojicic.fhir.ig.testing"/>
   <version value="0.0.1"/>
   <name value="DBojicicFHIRIGTesting"/>
+  <title value ="Testing IG"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="DBojicic"/>
@@ -610,10 +611,6 @@
 		<parameter>
 			<code value="special-url"/>
 			<value value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
-		</parameter>
-		<parameter>
-			<code value="special-url"/>
-			<value value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
 		</parameter>
   </definition>
 </ImplementationGuide>
