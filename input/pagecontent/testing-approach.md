@@ -118,7 +118,7 @@ Profile | Additional constraint
         </tr>
         <tr>
             <td>whenPrepared present, month only (7 chars)</td>
-            <td>Fail (whenPrepared precision invariant)</td>
+            <td>Fail - whenPrepared precision invariant</td>
             <td><a href="MedicationDispense-wp-b-04.html">medicationdispense-wp-b-04</a></td>
         </tr>
         <tr>
@@ -152,7 +152,7 @@ Profile | Additional constraint
             <td><a href="MedicationDispense-wp-b-10.html">medicationdispense-wp-b-10</a></td>
         </tr>
         <tr>
-            <td rowspan="10"><a href="StructureDefinition-au-core-wp-c.html">au-core-medicationdispense-wp-c</a></td>
+            <td rowspan="10"><a href="StructureDefinition-au-core-medicationdispense-wp-c.html">au-core-medicationdispense-wp-c</a></td>
             <td rowspan="10">whenPrepared is mandatory; DAR is permitted</td>
              <td>whenPrepared not present, no DAR</td>
             <td>Fail - mandatory requirement (neither value nor DAR present)</td>
@@ -245,7 +245,7 @@ Profile | Additional constraint
             <td><a href="MedicationDispense-wp-c-08.html">medicationdispense-wp-c-08</a></td>
         </tr>
         <tr>
-            <td>Absent, unrelated extension only</td>
+            <td>whenPrepared value not present, unrelated extension only</td>
             <td>Fail - neither value nor DAR present</td>
             <td><a href="MedicationDispense-wp-c-09.html">medicationdispense-wp-c-09</a></td>
         </tr>
@@ -273,18 +273,37 @@ Profile | Additional constraint
         </tr>
         <tr>
             <td>whenPrepared present, month only (7 chars)</td>
-            <td>Fail (whenPrepared precision invariant)</td>
+            <td>Fail - whenPrepared precision invariant</td>
             <td><a href="MedicationDispense-wp-e-04.html">medicationdispense-wp-e-04</a></td>
         </tr>
         <tr>
             <td>whenPrepared present, year only (4 chars)</td>
-            <td>Fail (whenPrepared precision invariant)</td>
+            <td>Fail - whenPrepared precision invariant</td>
             <td><a href="MedicationDispense-wp-e-05.html">medicationdispense-wp-e-05</a></td>
         </tr>
         <tr>
             <td>whenPrepared not present, DAR used instead</td>
-            <td>Fail - DAR-prohibition invariant</td>
+            <td>Fail - DAR prohibition invariant fires</td>
             <td><a href="MedicationDispense-wp-e-06.html">medicationdispense-wp-e-06</a></td>
+        </tr>
+        <tr>
+            <td>Value + DAR together</td>
+            <td>Fail - DAR prohibition invariant fires</td>
+            <td><a href="MedicationDispense-wp-e-07.html">medicationdispense-wp-e-07</a></td></tr>
+        <tr>
+            <td>Value + unrelated extension</td>
+            <td>Pass - unrelated extension unaffected</td>
+            <td><a href="MedicationDispense-wp-e-08.html">medicationdispense-wp-e-08</a></td>
+        </tr>
+        <tr>
+            <td>whenPrepared value not present, unrelated extension only</td>
+            <td>Pass - element optional; extension present is not DAR so prohibition invariant doesn't fire</td>
+            <td><a href="MedicationDispense-wp-e-09.html">medicationdispense-wp-e-09</a></td>
+        </tr>
+        <tr>
+            <td>Value + DAR + unrelated extension</td>
+            <td>Fail - DAR prohibition invariant fires; unrelated extension irrelevant</td>
+            <td><a href="MedicationDispense-wp-e-10.html">medicationdispense-wp-c-10</a></td>
         </tr>
         <tr>
         <td rowspan="6"><a href="StructureDefinition-au-core-medicationdispense-wp-f.html">au-core-medicationdispense-wp-f</a></td>
@@ -298,10 +317,10 @@ Profile | Additional constraint
         <tr>
             <td>whenPrepared present, date only (10 chars)</td><td>Pass</td><td><a href="MedicationDispense-medicationdispense-wp-f-03.html">medicationdispense-wp-f-03</a></td></tr>
         <tr>
-            <td>whenPrepared present, month only (7 chars)</td><td>Fail (whenPrepared precision invariant) (inherited)</td><td><a href="MedicationDispense-medicationdispense-wp-f-04.html">medicationdispense-wp-f-04</a></td>
+            <td>whenPrepared present, month only (7 chars)</td><td>Fail - whenPrepared precision invariant (inherited)</td><td><a href="MedicationDispense-medicationdispense-wp-f-04.html">medicationdispense-wp-f-04</a></td>
         </tr>
             <tr>
-                <td>whenPrepared present, year only (4 chars)</td><td>Fail (whenPrepared precision invariant) (inherited)</td><td><a href="MedicationDispense-medicationdispense-wp-f-05.html">medicationdispense-wp-f-05</a></td>
+                <td>whenPrepared present, year only (4 chars)</td><td>Fail - whenPrepared precision invariant (inherited)</td><td><a href="MedicationDispense-medicationdispense-wp-f-05.html">medicationdispense-wp-f-05</a></td>
             </tr>
         <tr>
             <td>whenPrepared not present, DAR used instead</td><td>Pass - DAR satisfies inherited mandatory requirement</td><td><a href="MedicationDispense-medicationdispense-wp-f-06.html">medicationdispense-wp-f-06</a></td>
