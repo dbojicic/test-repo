@@ -67,6 +67,30 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationrequest-ao-or"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationrequest-ao-imp"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationrequest-ao-xor"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-medicationrequest-ao-imp-excl"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
     <!--MedicationDispense Examples-->
 	<resource>
 		<reference>

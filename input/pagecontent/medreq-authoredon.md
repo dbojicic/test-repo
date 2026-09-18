@@ -3,7 +3,7 @@
 This test series evaluates three candidate FHIRPath expressions for the AU Core `MedicationRequest.authoredOn` invariant **au-core-medreq-01**, raised in [FHIR-59045](https://jira.hl7.org/browse/FHIR-59045).
 
 The human readable invariant description is:
-> **Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present**
+> Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present
 
 The tests evaluate whether each candidate expression:
 - requires a populated `MedicationRequest.authoredOn` value to be precise to at least the day
@@ -21,10 +21,10 @@ The following candidate expressions are tested:
 
 Series code|Candidate expression
 --- | --- 
-ar-or|`($this.hasValue() and $this.toString().length() >= 10) or ($this.hasValue().not() and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
-ar-imp|`($this.hasValue() implies $this.toString().length() >= 10) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
-ar-xor|`($this.hasValue() and $this.toString().length() >= 10) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()`
-ar-imp-excl|`($this.hasValue() implies ($this.toString().length() >= 10 and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists().not())) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
+ao-or|`($this.hasValue() and $this.toString().length() >= 10) or ($this.hasValue().not() and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
+ao-imp|`($this.hasValue() implies $this.toString().length() >= 10) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
+ao-xor|`($this.hasValue() and $this.toString().length() >= 10) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()`
+ao-imp-excl|`($this.hasValue() implies ($this.toString().length() >= 10 and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists().not())) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
 {:.grid}
 
 The purpose of this test series is to confirm which expression(s) correctly implement the human readable description, without unintentionally restricting downstream profiling choices around authoredOn cardinality or use of DAR. 
@@ -32,11 +32,12 @@ This will provide input into discussion about which of the correct expressions i
 
 #### Initial expression comparison
 
-A FHIR primitive element can contain both a primitive value and extensions. The presence of a value and DAR on `MedicationRequest.authoredOn` therefore needs to be considered explicitly when comparing the candidate expressions.
+A FHIR primitive element can contain both a primitive value and extensions. The presence of a value and DAR on `MedicationRequest.authoredOn` should be considered when comparing the candidate expressions. 
+**Question**: When a sufficiently precise value is present, does AU Core also require DAR to be absent?
 
 The following table shows the expected result for each expression based on its FHIRPath logic:
 
-Scenario | ar-or | ar-imp | ar-xor | ar-imp-excl
+Scenario | ao-or | ao-imp | ao-xor | ao-imp-excl
 --- | --- | --- | ---
 Precise value only|Pass|Pass|Pass|Pass
 Imprecise value only|Fail|Fail|Fail|Fail
@@ -48,16 +49,38 @@ Imprecise value + DAR|Fail|Fail|**Pass**|Fail
 
 The differences result from the logic of each expression:
 
-- **ar-or** requires either a sufficiently precise value, or no value with DAR present. When a sufficiently precise value is present, the expression passes regardless of whether DAR is also present.
-- **ar-imp** requires a value, when present, to be sufficiently precise, and requires DAR when there is no value. It does not place any additional restriction on DAR when a value is present. Its expected results are therefore the same as ar-or for these scenarios.
-- **ar-xor** requires exactly one side of the expression to evaluate to true. It therefore fails a precise value with DAR. However, an imprecise value makes the first condition false; when DAR is also present, the second condition is true and the overall expression passes. 
-- **ar-imp-excl** requires a value, when present, to be sufficiently precise and DAR to be absent. When there is no value, it requires DAR to be present. It therefore fails both a precise value with DAR and an imprecise value with DAR.
+- **ao-or** requires either a sufficiently precise value, or no value with DAR present. When a sufficiently precise value is present, the expression passes regardless of whether DAR is also present.
+- **ao-imp** requires a value, when present, to be sufficiently precise, and requires DAR when there is no value. No additional restriction on DAR when a value is present. Its expected results are the same as ar-or.
+- **ao-xor** requires exactly one side of the expression to evaluate to true. It fails a precise value with DAR. However, an imprecise value makes the first condition false; when DAR is also present, the second condition is true and the overall expression passes. 
+- **ao-imp-excl** requires a value, when present, to be sufficiently precise and DAR to be absent. When there is no value, it requires DAR to be present. It therefore fails both a precise value with DAR and an imprecise value with DAR.
 
 These scenarios are tested first to confirm the expected behaviour of each candidate expression before applying the full test matrix.
 
+List of baseline profiles:
 
+Profile | Expression
+---|---
+au-core-medicationrequest-ao-or|ao-or
+au-core-medicationrequest-ao-imp|ao-imp
+au-core-medicationrequest-ao-xor|ao-xor
+au-core-medicationrequest-ao-imp-excl|ao-imp-excl
+{:.grid}
 
+**TBD**: derived profiles applying further constraints
 
+Baseline scenarios, to run against each profile:
+Scenario|
+---|---
+Precise value only | valid value accepted
+Imprecise value only, no DAR | enforced precision requriement
+DAR only | DAR accepted
+Other extension only, no DAR | DAR required when value is not present
+DAR + other extension, no value | DAR requirement satisfied
+Precise value + DAR | allowed or not?? What do we want??
+Imprecise value + DAR | this shows issue with the xor expression - don't think AU Core wants to allow this
+Precise value + other extension, no DAR | allowed, the invariant does not say anything about other extensions
+Imprecise value + other extension, no DAR | enforced precision requriement
+No authoredOn element | cardinality behavior
 
 
 
