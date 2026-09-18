@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MedicationRequest xmlns="http://hl7.org/fhir">
-    <id value="ao-or-01"/>
+    <id value="ao-a-01"/>
     <meta>
-        <profile value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+        <profile value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-a"/>
     </meta>
     <status value="unknown"/>
     <intent value="order"/>

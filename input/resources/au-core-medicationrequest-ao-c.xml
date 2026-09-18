@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-core-medicationrequest-ao-xor"/>
+  <id value="au-core-medicationrequest-ao-c"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="2"/> 
   </extension>
-  <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-xor"/>
+  <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-c"/>
   <name value="AUCoreMedicationRequestao-xor"/>
   <title value="EXPERIMENTAL AU Core MedicationRequest ao-xor"/>
   <status value="active"/>

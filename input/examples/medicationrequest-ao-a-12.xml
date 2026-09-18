@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MedicationRequest xmlns="http://hl7.org/fhir">
-    <id value="ao-or-10"/>
+    <id value="ao-a-12"/>
     <meta>
-        <profile value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+        <profile value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-a"/>
     </meta>
     <status value="unknown"/>
     <intent value="order"/>
@@ -16,11 +16,6 @@
     <subject>
         <reference value="Patient/bennelong-anne"/>
     </subject>
-    <authoredOn value="2023-06-01">
-        <extension url="http://hl7.org/fhir/StructureDefinition/originalText">
-            <valueString value="some text"/>
-        </extension>
-    </authoredOn>
     <requester>
         <reference value="PractitionerRole/surgeon-chau-fryer"/>
     </requester>
