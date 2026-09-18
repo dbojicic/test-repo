@@ -91,7 +91,7 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
-    <!--MedicationDispense Examples-->
+    <!--MEDICATIONDISPENSE EXAMPLES-->
 	<resource>
 		<reference>
 			<reference value="MedicationDispense/wp-a-01"/>
@@ -571,6 +571,103 @@
 		<name value="MedicationDispense - wp-f-10 ared value + DAR + unrelated extension"/>
 		<description value="wp-f-10 whenPrepared value + DAR + unrelated extension"/>
 		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationdispense-wp-f"/>
+	</resource>
+	<!--MEDICATIONREQUEST EXAMPLES-->
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-01"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-01 "/>
+		<description value="ao-or-01 authoredOn value present, full datetime"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-02"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-02 "/>
+		<description value="ao-or-02 authoredOn value present, date only (10 chars)"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-03"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-03 "/>
+		<description value="ao-or-03 authoredOn value present, month only (7 chars"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-04"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-04 "/>
+		<description value="ao-or-04 authoredOn value present, year only (4 chars)"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-05"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-05"/>
+		<description value="ao-or-05 authoredOn value not present, DAR used instead"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-06"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-06"/>
+		<description value="ao-or-06 Other extension only, no value and no DAR"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-07"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-07"/>
+		<description value="ao-or-07 DAR + other extension, no value"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-08"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-08"/>
+		<description value="ao-or-08 authoredOn precise value present + DAR"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-09"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-09"/>
+		<description value="ao-or-09 authoredOn imprecise value present + DAR"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-10"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-10"/>
+		<description value="ao-or-10 authoredOn precise value present + other extension, no DAR"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-11"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-11"/>
+		<description value="ao-or-11 authoredOn imprecise value present + other extension, no DAR"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="MedicationRequest/ao-or-12"/>
+		</reference>
+		<name value="MedicationRequest - ao-or-12"/>
+		<description value="ao-or-12 No authoredOn element"/>
+		<exampleCanonical value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
 	</resource>
     <!-- PAGES-->
 		<page>

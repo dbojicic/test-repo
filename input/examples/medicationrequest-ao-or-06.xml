@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationRequest xmlns="http://hl7.org/fhir">
+    <id value="ao-or-06"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest-ao-or"/>
+    </meta>
+    <status value="unknown"/>
+    <intent value="order"/>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="79115011000036100"/>
+            <display value="Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"/>
+        </coding>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="Patient/bennelong-anne"/>
+    </subject>
+    <authoredOn>
+        <extension url="http://hl7.org/fhir/StructureDefinition/originalText">
+      <valueString value="some text"/>
+    </extension>
+    </authoredOn>
+    <requester>
+        <reference value="PractitionerRole/surgeon-chau-fryer"/>
+    </requester>
+    <dosageInstruction>
+        <text value="1-2 tablets every 4-6 hours as needed for pain"/>
+    </dosageInstruction>
+</MedicationRequest>
