@@ -8,37 +8,50 @@ The human readable invariant description is:
 The tests evaluate whether each candidate expression:
 - requires a populated `MedicationRequest.authoredOn` value to be precise to at least the day
 - requires Data Absent Reason (DAR) when `MedicationRequest.authoredOn` has no value
-- behaves as expected when a value and DAR are both present
-- permits further constraints to be applied to `MedicationRequest.authoredOn` in downstream profiles
+- determines how each expression behaves when a value and DAR are both present
+- allows further constraints to be applied to `MedicationRequest.authoredOn` in downstream profiles
+
+This will be used to determine which expression correctly implements the human readable description without intentionally restricting downstream use and profiling choices around `MedicationRequest.authoredOn` and the use of DAR.
+
+Question: When a sufficiently precise value is present, does AU Core also require DAR to be absent?
 
 #### Candidate expressions
 
-The expressions proposed for the implementations of this description:
+The following candidate expressions are tested:
+
 Series code|Candidate expression
 --- | --- 
 ar-or|`($this.hasValue() and $this.toString().length() >= 10) or ($this.hasValue().not() and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
+ar-imp|`($this.hasValue() implies $this.toString().length() >= 10) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
 ar-xor|`($this.hasValue() and $this.toString().length() >= 10) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()`
-ar-imp|`($this.hasValue() implies ($this.toString().length() >= 10 and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists().not())) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
+ar-imp-excl|`($this.hasValue() implies ($this.toString().length() >= 10 and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists().not())) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())`
 {:.grid}
 
 The purpose of this test series is to confirm which expression(s) correctly implement the human readable description, without unintentionally restricting downstream profiling choices around authoredOn cardinality or use of DAR. 
 This will provide input into discussion about which of the correct expressions is preferable for AU Core.
 
-#### Value and Data Absent Reason on the same element
+#### Initial expression comparison
 
 A FHIR primitive element can contain both a primitive value and extensions. The presence of a value and DAR on `MedicationRequest.authoredOn` therefore needs to be considered explicitly when comparing the candidate expressions.
 
-Scenario | ar-or | ar-xor | ar-imp
+The following table shows the expected result for each expression based on its FHIRPath logic:
+
+Scenario | ar-or | ar-imp | ar-xor | ar-imp-excl
 --- | --- | --- | ---
-Precise value + DAR|Pass|Fail|Fail
-Imprecise value + DAR|Fail|Pass|Fail
+Precise value only|Pass|Pass|Pass|Pass
+Imprecise value only|Fail|Fail|Fail|Fail
+DAR only|Pass|Pass|Pass|Pass
+Other extension only, no DAR|Fail|Fail|Fail|Fail
+Precise value + DAR|Pass|Pass|Fail|Fail
+Imprecise value + DAR|Fail|Fail|**Pass**|Fail
 {:.grid}
 
 The differences result from the logic of each expression:
 
-- **ar-or** passes when the value is sufficiently precise, irrespective of whether DAR is also present.
-- **ar-xor** requires exactly one side of the expression to evaluate to true. It therefore fails a precise value with DAR, but passes an imprecise value with DAR because the value condition is false and the DAR condition is true.
-- **ar-imp** requires a populated value to be sufficiently precise and DAR to be absent. When there is no value, it requires DAR to be present. It therefore fails both a precise value with DAR and an imprecise value with DAR.
+- **ar-or** requires either a sufficiently precise value, or no value with DAR present. When a sufficiently precise value is present, the expression passes regardless of whether DAR is also present.
+- **ar-imp** requires a value, when present, to be sufficiently precise, and requires DAR when there is no value. It does not place any additional restriction on DAR when a value is present. Its expected results are therefore the same as ar-or for these scenarios.
+- **ar-xor** requires exactly one side of the expression to evaluate to true. It therefore fails a precise value with DAR. However, an imprecise value makes the first condition false; when DAR is also present, the second condition is true and the overall expression passes. 
+- **ar-imp-excl** requires a value, when present, to be sufficiently precise and DAR to be absent. When there is no value, it requires DAR to be present. It therefore fails both a precise value with DAR and an imprecise value with DAR.
 
 These scenarios are tested first to confirm the expected behaviour of each candidate expression before applying the full test matrix.
 
