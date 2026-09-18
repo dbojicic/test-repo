@@ -2,7 +2,7 @@
 <MedicationRequest xmlns="http://hl7.org/fhir">
     <id value="ao-or-08"/>
     <meta>
-        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest-ao-or"/>
+        <profile value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-or"/>
     </meta>
     <status value="unknown"/>
     <intent value="order"/>
