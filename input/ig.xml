@@ -562,6 +562,21 @@
 				<nameUrl value="testing-approach.html"/>
 				<title value="Testing Approach"/>
 				<generation value="markdown"/>
+				<page>
+					<nameUrl value="approach.html"/>
+					<title value="Testing Approach"/>
+					<generation value="markdown"/> 
+				</page>
+				<page>
+					<nameUrl value="meddisp-whenprepared.html"/>
+					<title value="MedicationDispense.whenPrepared - Date Precision"/>
+					<generation value="markdown"/> 
+				</page>
+				<page>
+					<nameUrl value="medreq-authoredon.html"/>
+					<title value="MedicationRequest.authoredOn - Date or Data Absent Reason"/>
+					<generation value="markdown"/>
+				</page>
 			</page>
 			<page>
 				<nameUrl value="artifacts.html"/>

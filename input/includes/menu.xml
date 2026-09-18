@@ -2,8 +2,17 @@
   <li>
     <a href="index.html">Home</a>
   </li>
-  <li>
-    <a href="testing-approach.html">Testing Approach</a>
+<li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Testing Approach
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="approach.html">Testing Approach</a>
+        <a href="meddisp-whenprepared.html">MedicationDispense.whenPrepared - Date Precision</a>
+        <a href="medreq-authoredon.html">MedicationRequest.authoredOn - Date or Data Absent Reason</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Artefacts Summary</a>
