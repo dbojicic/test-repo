@@ -66,7 +66,7 @@ au-core-medicationrequest-ao-d|ao-d
 List of derived profiles: 
 
 - **ao-e**: derives from ao-d + requires DAR to be present
-- **ao-f**: derives from ao-d + requires authoreOn to have a value
+- **ao-f**: derives from ao-d + requires authoredOn to have a value
 Note: only two profiles deriving from the profile with preferred expression (ao-d) created at this stage, more to be done as needed.
 
 List of baseline scenarios, to run against each profile:
