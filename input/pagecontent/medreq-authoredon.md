@@ -30,8 +30,7 @@ This will provide input into discussion about which of the correct expressions i
 
 #### Initial expression comparison
 
-Note: A FHIR primitive element can contain both a primitive value and extensions. The presence of a value and DAR on `MedicationRequest.authoredOn` should be considered when comparing the candidate expressions. 
-**Question**: When a sufficiently precise value is present, does AU Core also require DAR to be absent? Think we need to build this check into the invariant expression.
+Note: A FHIR primitive element can contain both a primitive value and extensions. The presence of a value and DAR on `MedicationRequest.authoredOn` should be considered when comparing the candidate expressions and any needed specific requirements built into the invariant expression.
 
 The following table shows the expected result for each expression based on its FHIRPath logic:
 
@@ -52,7 +51,7 @@ The differences from the expression logic:
 - **ao-c** requires exactly one side of the expression to evaluate to true. It fails a precise value with DAR. But - an imprecise value makes the first condition false; when DAR is also present, the second condition is true and the overall expression passes.
 - **ao-d** requires a value, when present, to be sufficiently precise and DAR to be absent. When there is no value, it requires DAR to be present. It fails both a precise value with DAR and an imprecise value with DAR.
 
-These scenarios are tested first to confirm the expected behaviour of each candidate expression. TBD - derived profiles + full test matrix
+These scenarios are tested first to confirm the expected behaviour of each candidate expression. TBD - derived profiles + full test matrix. 
 
 List of baseline profiles:
 
@@ -64,7 +63,11 @@ au-core-medicationrequest-ao-c|ao-c
 au-core-medicationrequest-ao-d|ao-d
 {:.grid}
 
-**TBD**: derived profiles applying further constraints
+List of derived profiles: 
+
+- **ao-e**: derives from ao-d + requires DAR to be present
+- **ao-f**: derives from ao-d + requires authoreOn to have a value
+Note: only two profiles deriving from the profile with preferred expression (ao-d) created at this stage, more to be done as needed.
 
 List of baseline scenarios, to run against each profile:
 
