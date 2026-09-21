@@ -93,6 +93,12 @@
     </resource>
 	<resource>
       <reference>
+        <reference value="StructureDefinition/au-core-medicationrequest-ao-e"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
         <reference value="StructureDefinition/au-core-medicationrequest-ao-f"/>
       </reference>
       <exampleBoolean value="false"/>
