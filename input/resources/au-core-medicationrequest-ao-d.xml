@@ -5,8 +5,8 @@
     <valueInteger value="2"/> 
   </extension>
   <url value="https://dbojicic.github.io/fhir-ig-testing/StructureDefinition/au-core-medicationrequest-ao-d"/>
-  <name value="AUCoreMedicationRequestao-imp-excl"/>
-  <title value="EXPERIMENTAL AU Core MedicationRequest ao-imp-excl"/>
+  <name value="AUCoreMedicationRequestao-d"/>
+  <title value="EXPERIMENTAL AU Core MedicationRequest ao-d"/>
   <status value="active"/>
   <description value="This profile sets minimum expectations for a MedicationRequest resource to record, search, and fetch medication orders and requests (i.e. prescriptions) associated with a patient. It is based on the [AU Base MedicationRequest](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationrequest.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the MedicationRequest when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <kind value="resource"/>
