@@ -353,7 +353,7 @@ The table below lists each test profile and its additional constraint, the test 
             <td rowspan="12">Derives from medicationrequest-ao-d and requires DAR</td>
             <td>authoredOn value present, full datetime</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-01.html">MedicationRequest-ao-e-01</a></td>
+            <td><a href="MedicationRequest-ao-e-01.html">MedicationRequest-ao-e-01</a></td>
         </tr>
         <tr>
             <td>authoredOn value present, date only (10 chars)</td>
@@ -363,52 +363,52 @@ The table below lists each test profile and its additional constraint, the test 
         <tr>
             <td>authoredOn value present, month only (7 chars)</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-03.html">MedicationRequest-ao-e-03</a></td>
+            <td><a href="MedicationRequest-ao-e-03.html">MedicationRequest-ao-e-03</a></td>
         </tr>
         <tr>
             <td>authoredOn value present, year only (4 chars)</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-04.html">MedicationRequest-ao-e-04</a></td>
+            <td><a href="MedicationRequest-ao-e-04.html">MedicationRequest-ao-e-04</a></td>
         </tr>
         <tr>
             <td>authoredOn value not present, DAR used instead</td>
             <td>Pass</td>
-            <td><a href="MedicationRequest-ao-f-05.html">MedicationRequest-ao-e-05</a></td>
+            <td><a href="MedicationRequest-ao-e-05.html">MedicationRequest-ao-e-05</a></td>
         </tr>
         <tr>
             <td>Other extension only, no value and no DAR</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-06.html">MedicationRequest-ao-e-06</a></td>
+            <td><a href="MedicationRequest-ao-e-06.html">MedicationRequest-ao-e-06</a></td>
         </tr>
         <tr>
             <td>DAR + other extension, no value</td>
             <td>Pass</td>
-            <td><a href="MedicationRequest-ao-f-07.html">MedicationRequest-ao-e-07</a></td>
+            <td><a href="MedicationRequest-ao-e-07.html">MedicationRequest-ao-e-07</a></td>
         </tr>
         <tr>
             <td>authoredOn precise value present + DAR</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-08.html">MedicationRequest-ao-e-08</a></td>
+            <td><a href="MedicationRequest-ao-e-08.html">MedicationRequest-ao-e-08</a></td>
         </tr>
         <tr>
             <td>authoredOn imprecise value present + DAR</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-09.html">MedicationRequest-ao-e-09</a></td>
+            <td><a href="MedicationRequest-ao-e-09.html">MedicationRequest-ao-e-09</a></td>
         </tr>
         <tr>
             <td>authoredOn precise value present + other extension, no DAR </td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-10.html">MedicationRequest-ao-e-10</a></td>
+            <td><a href="MedicationRequest-ao-e-10.html">MedicationRequest-ao-e-10</a></td>
         </tr>
         <tr>
             <td>authoredOn imprecise value present + other extension, no DAR</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-11.html">MedicationRequest-ao-e-11</a></td>
+            <td><a href="MedicationRequest-ao-e-11.html">MedicationRequest-ao-e-11</a></td>
         </tr>
         <tr>
             <td>No authoredOn element</td>
             <td>Fail</td>
-            <td><a href="MedicationRequest-ao-f-12.html">MedicationRequest-ao-e-12</a></td>
+            <td><a href="MedicationRequest-ao-e-12.html">MedicationRequest-ao-e-12</a></td>
         </tr>
         <tr>
             <td rowspan="12"><a href="StructureDefinition-au-core-medicationrequest-ao-f.html">medicationrequest-ao-f</a></td>
