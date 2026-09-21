@@ -285,7 +285,7 @@ The table below lists each test profile and its additional constraint, the test 
         </tr>
         <tr>
             <td rowspan="12"><a href="StructureDefinition-au-core-medicationrequest-ao-d.html">medicationrequest-ao-d</a></td>
-            <td rowspan="12"><code>($this.hasValue() and $this.toString().length() >= 10) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()</code></td>
+            <td rowspan="12"><code>($this.hasValue() implies ($this.toString().length() >= 10 and extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists().not())) and ($this.hasValue().not() implies extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())</code></td>
             <td>authoredOn value present, full datetime</td>
             <td>Pass</td>
             <td><a href="MedicationRequest-ao-d-01.html">MedicationRequest-ao-d-01</a></td>
@@ -406,6 +406,6 @@ The table below lists each test profile and its additional constraint, the test 
             <td>No authoredOn element</td>
             <td>Fail</td>
             <td><a href="MedicationRequest-ao-f-12.html">MedicationRequest-ao-f-12</a></td>
-        </tr
+        </tr>
     </tbody>
 </table>
