@@ -9,6 +9,7 @@
     <ul class="dropdown-menu">
       <li>
         <a href="approach.html">Testing Approach</a>
+        <a href="docref-attachment.html">DocumentReference.content.attachment - URL or Data required</a>
         <a href="meddisp-whenprepared.html">MedicationDispense.whenPrepared - Date Precision</a>
         <a href="medreq-authoredon.html">MedicationRequest.authoredOn - Date or Data Absent Reason</a>
       </li>

@@ -25,6 +25,12 @@
 	</dependsOn>
   <definition>
     <!--PROFILES-->
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-documentreference-att"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-medicationdispense"/>
@@ -103,6 +109,39 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+	<!--DOCUMENTREFERENCE EXAMPLES-->
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-01"/>
+		</reference>
+		<name value="DocumentReference - data present"/>
+		<description value="Data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-02"/>
+		</reference>
+		<name value="DocumentReference - url present"/>
+		<description value="URL present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-03"/>
+		</reference>
+		<name value="DocumentReference - url and data present"/>
+		<description value="URL and data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-04"/>
+		</reference>
+		<name value="DocumentReference - no url or data present"/>
+		<description value="No URL or data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
     <!--MEDICATIONDISPENSE EXAMPLES-->
 	<resource>
 		<reference>
@@ -1083,6 +1122,11 @@
 				<page>
 					<nameUrl value="approach.html"/>
 					<title value="Testing Approach"/>
+					<generation value="markdown"/> 
+				</page>
+				<page>
+					<nameUrl value="docref-attachment.html"/>
+					<title value="DocumentReference.content.attachment - URL or Data required"/>
 					<generation value="markdown"/> 
 				</page>
 				<page>
