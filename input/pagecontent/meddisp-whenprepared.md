@@ -1,11 +1,8 @@
 ### MedicationDispense.whenPrepared precision
 
-This test series tests the AU Core invariant requiring `MedicationDispense.whenPrepared`, when populated, to be precise to at least the day: 
-`$this.hasValue() implies $this.toString().length() >= 10`
+This test series tests the AU Core invariant requiring `DocumentReference.content.attachment.url` or `DocumentReference.content.attachment.data` to be present: `url.exists() or data.exists()`
 
-The tests use profiles derived from AU Core MedicationDispense with different downstream constraints on `MedicationDispense.whenPrepared`. The purpose is to confirm that the invariant constrains date precision without preventing downstream profiles from independently constraining the presence of `MedicationDispense.whenPrepared`, use of Data Absent Reason (DAR), or other valid profiling choices and without restricting any content valid content (other extensions, or DAR co-existing with a value).
-
-The table below lists each test profile and its additional constraint, the test scenarios, expected validation results, and corresponding example instances.
+The table below lists the test scenarios, expected validation results, and corresponding example instances.
 
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
     <thead>
