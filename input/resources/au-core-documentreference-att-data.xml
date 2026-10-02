@@ -6,7 +6,7 @@
   <title value="EXPERIMENTAL AU Core DocumentReference Data"/>
   <status value="active"/>
   <experimental value="true"/>
-  <description value="This profile sets minimum expectations for a DocumentReference resource to record, search, and fetch documents associated with a patient. It is based on the [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the DocumentReference resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."/>
+  <description value="Test profile derived from AU Core DocumentReference exp profile and requires content.attachment.data is mandatory"/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="DocumentReference"/>
