@@ -43,6 +43,7 @@ The table below lists the test scenarios, expected validation results, and corre
 In addition to tests above.
 
 Baseline profile: [au-core-documentreference-att](StructureDefinition-au-core-documentreference-att.html)
+
 List of derived profiles:
 - [au-core-documentreference-att-url](StructureDefinition-au-core-documentreference-att-url.html): derives from au-core-documentreference-att + requires url (1..1)
 - [au-core-documentreference-att-data](StructureDefinition-au-core-documentreference-att-data.html): derives from au-core-documentreference-att + requires data (1..1)
