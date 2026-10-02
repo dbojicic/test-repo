@@ -31,6 +31,18 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-documentreference-att-url"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/au-core-documentreference-att-data"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-core-medicationdispense"/>
@@ -141,6 +153,318 @@
 		<name value="DocumentReference - no url or data present"/>
 		<description value="No URL or data present"/>
 		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-01"/>
+		</reference>
+		<name value="DocumentReference - att-x-01 url present"/>
+		<description value="url present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-02"/>
+		</reference>
+		<name value="DocumentReference - att-x-02 data present"/>
+		<description value="data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-03"/>
+		</reference>
+		<name value="DocumentReference - att-x-03 url and data present"/>
+		<description value="url and data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-04"/>
+		</reference>
+		<name value="DocumentReference - att-x-04 no data or url"/>
+		<description value="no data or url"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-05"/>
+		</reference>
+		<name value="DocumentReference - att-x-05 url DAR only, no value, no data"/>
+		<description value="url DAR only, no value, no data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-06"/>
+		</reference>
+		<name value="DocumentReference - att-x-06 data DAR only, no value, no url"/>
+		<description value="data DAR only, no value, no url"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-07"/>
+		</reference>
+		<name value="DocumentReference - att-x-07 url other extension only, no value, no data"/>
+		<description value="data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-08"/>
+		</reference>
+		<name value="DocumentReference - att-x-08 url DAR only, no value + data present"/>
+		<description value="url DAR only, no value + data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-09"/>
+		</reference>
+		<name value="DocumentReference - att-x-09 url value present + DAR"/>
+		<description value="url value present + DAR"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-10"/>
+		</reference>
+		<name value="DocumentReference - att-x-10 two content entries, one with url and one with data"/>
+		<description value="two content entries, one with url and one with data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-11"/>
+		</reference>
+		<name value="DocumentReference - att-x-11 two content entries, one with no url or data"/>
+		<description value="two content entries, one with no url or data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-12"/>
+		</reference>
+		<name value="DocumentReference - att-x-12 no content element"/>
+		<description value="no content element"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-13"/>
+		</reference>
+		<name value="DocumentReference - att-x-13 content present, attachment absent"/>
+		<description value="content present, attachment absent"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att"/>
+	</resource>
+	<resource>
+			<reference>
+			<reference value="DocumentReference/att-x-url-01"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-01 url present"/>
+		<description value="url present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-02"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-02 data present"/>
+		<description value="data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-03"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-03 url and data present"/>
+		<description value="url and data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-04"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-04 no data or url"/>
+		<description value="no data or url"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-05"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-05 url DAR only, no value, no data"/>
+		<description value="url DAR only, no value, no data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-06"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-06 data DAR only, no value, no url"/>
+		<description value="data DAR only, no value, no url"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-07"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-07 url other extension only, no value, no data"/>
+		<description value="data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-08"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-08 url DAR only, no value + data present"/>
+		<description value="url DAR only, no value + data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-09"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-09 url value present + DAR"/>
+		<description value="url value present + DAR"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-10"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-10 two content entries, one with url and one with data"/>
+		<description value="two content entries, one with url and one with data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-11"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-11 two content entries, one with no url or data"/>
+		<description value="two content entries, one with no url or data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-12"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-12 no content element"/>
+		<description value="no content element"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-url-13"/>
+		</reference>
+		<name value="DocumentReference - att-x-url-13 content present, attachment absent"/>
+		<description value="content present, attachment absent"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-url"/>
+	</resource>
+	<resource>
+			<reference>
+			<reference value="DocumentReference/att-x-data-01"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-01 url present"/>
+		<description value="url present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-02"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-02 data present"/>
+		<description value="data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-03"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-03 url and data present"/>
+		<description value="url and data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-04"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-04 no data or url"/>
+		<description value="no data or url"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-05"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-05 url DAR only, no value, no data"/>
+		<description value="url DAR only, no value, no data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-06"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-06 data DAR only, no value, no url"/>
+		<description value="data DAR only, no value, no url"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-07"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-07 url other extension only, no value, no data"/>
+		<description value="data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-08"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-08 url DAR only, no value + data present"/>
+		<description value="url DAR only, no value + data present"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-09"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-09 url value present + DAR"/>
+		<description value="url value present + DAR"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-10"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-10 two content entries, one with url and one with data"/>
+		<description value="two content entries, one with url and one with data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-11"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-11 two content entries, one with no url or data"/>
+		<description value="two content entries, one with no url or data"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-12"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-12 no content element"/>
+		<description value="no content element"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
+	</resource>
+	<resource>
+		<reference>
+			<reference value="DocumentReference/att-x-data-13"/>
+		</reference>
+		<name value="DocumentReference - att-x-data-13 content present, attachment absent"/>
+		<description value="content present, attachment absent"/>
+		<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference-att-data"/>
 	</resource>
     <!--MEDICATIONDISPENSE EXAMPLES-->
 	<resource>
@@ -1188,10 +1512,6 @@
 		<parameter>
 			<code value="special-url"/>
 			<value value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationdispense"/>
-		</parameter>
-		<parameter>
-			<code value="special-url"/>
-			<value value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"/>
 		</parameter>
   </definition>
 </ImplementationGuide>
